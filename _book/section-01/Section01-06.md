@@ -27,5 +27,4 @@
 ```
 	print("Hello World!")
 ```
-* Just press enter after the line to run the code.
-* It's a run for you on the mac, I think it's command return to run some code.
+* Just press Ctrl Enter after the line to run the code.
