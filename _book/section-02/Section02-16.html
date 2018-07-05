@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>8. Welcome to Part 1 - Data Preprocessing · GitBook</title>
+        <title>16. Splitting the Dataset into the Training set and Test set · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Section02-09.html" />
     
-    
-    <link rel="prev" href="../section-01/Section01-07.html" />
+    <link rel="prev" href="Section02-15.html" />
     
 
     </head>
@@ -209,7 +207,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="Section02-08.html">
+        <li class="chapter " data-level="3.1" data-path="Section02-08.html">
             
                 <a href="Section02-08.html">
             
@@ -313,7 +311,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.9" data-path="Section02-16.html">
+        <li class="chapter active" data-level="3.9" data-path="Section02-16.html">
             
                 <a href="Section02-16.html">
             
@@ -356,7 +354,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >8. Welcome to Part 1 - Data Preprocessing</a>
+        <a href=".." >16. Splitting the Dataset into the Training set and Test set</a>
     </h1>
 </div>
 
@@ -371,17 +369,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="welcome-to-part-1---data-preprocessing">Welcome to Part 1 - Data Preprocessing</h1>
-<h2 id="data-preprocessing">DATA PREPROCESSING</h2>
-<h3 id="importance-of-data-preprocessing">Importance of Data Preprocessing</h3>
+                                <h1 id="16-splitting-the-dataset-into-the-training-set-and-test-set">16. Splitting the Dataset into the Training set and Test set</h1>
+<h2 id="making-the-machine-learning-models">MAKING THE MACHINE LEARNING MODELS</h2>
+<h3 id="activity">Activity</h3>
 <ul>
-<li>If there is no data pre-processing your machine learning model won&apos;t work properly.</li>
-<li>So its like preparing for a journey, imagine you are about to go for a long journey while you have to prepare your itinenary, your flights, your hotel bookings and packing your lauggage.</li>
-<li>We have to prepare some stuff in order to make sure that we build our machine learning models without any issues.</li>
-<li>And this stuff that we need to prepare for machine learning trip happens to be data pre-processing.</li>
-<li>We have to do it because if we don&apos;t do it we miss out on all the fun of machine learning.</li>
-<li>I will make sure to make sure it as simple as possible there is all you need to know about data-processing.</li>
-<li>There is all you need to know how to do to prepare any data set for any machine learning model.</li>
+<li>We are going to split the two data sets into training and test set.</li>
+<li>Machine learning means the machine is going to learn to do something from a data set.</li>
+<li>We are going to build our machine learning models on a data set but then we have to test on a new set which is going to be slightly different from the data set on which we build th machine learning model</li>
+<li>Test the performance on the test set shouldnt be that different from the performance from the training set</li>
+</ul>
+<h3 id="splitting-the-datasets-on-python">Splitting the Datasets on Python</h3>
+<pre><code>    # Splitting the dataset into the Training set and Test set
+    import sklearn.cross_validation import train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+</code></pre><ul>
+<li>The better we learn the correlationship, the better we are at predicting the test set learned correctly from the training set.</li>
+</ul>
+<h3 id="splitting-the-datasets-on-r">Splitting the Datasets on R</h3>
+<pre><code>    # Splitting the data set into the Training set and Test set
+    # install.packages(&apos;caTools&apos;)
+    set.seed(123)
+    split = sample.split(datasets$Purchased, SplitRatio = 0.8)
+    training_set = subset(dataset, split == TRUE)
+    test_set = subset(dataset, split == FALSE)
+</code></pre><ul>
+<li>Once you installed the caTools packages once, you can comment it because you do need to install it again</li>
+<li>You can check if caTools library in the Packages on the right hand side</li>
+<li>Select caTools package before running the code</li>
+<li>Now, you can view the training_set and the test_set which should show the respective number of observations</li>
 </ul>
 
                                 
@@ -410,14 +425,10 @@
 
             
                 
-                <a href="../section-01/Section01-07.html" class="navigation navigation-prev " aria-label="Previous page: 7. BONUS: Meet your instructors">
+                <a href="Section02-15.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 15. WARNING - Update">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Section02-09.html" class="navigation navigation-next " aria-label="Next page: 9. Get the dataset">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -426,7 +437,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. Welcome to Part 1 - Data Preprocessing","level":"3.1","depth":1,"next":{"title":"9. Get the dataset","level":"3.2","depth":1,"path":"section-02/Section02-09.md","ref":"section-02/Section02-09.md","articles":[]},"previous":{"title":"7. BONUS: Meet your instructors","level":"2.7","depth":1,"path":"section-01/Section01-07.md","ref":"section-01/Section01-07.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-08.md","mtime":"2018-06-27T08:21:02.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-05T15:52:43.718Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"16. Splitting the Dataset into the Training set and Test set","level":"3.9","depth":1,"previous":{"title":"15. WARNING - Update","level":"3.8","depth":1,"path":"section-02/Section02-15.md","ref":"section-02/Section02-15.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section-02/Section02-16.md","mtime":"2018-07-05T15:51:40.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-05T15:52:43.718Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

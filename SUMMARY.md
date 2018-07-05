@@ -24,3 +24,4 @@
 * [13. Missing Data](section-02/Section02-13.md)
 * [14. Categorical Data](section-02/Section02-14.md)
 * [15. WARNING - Update](section-02/Section02-15.md)
+* [16. Splitting the Dataset into the Training set and Test set](section-02/Section02-16.md)
