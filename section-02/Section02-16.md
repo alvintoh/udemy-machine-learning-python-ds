@@ -8,7 +8,7 @@
 * We are going to build our machine learning models on a data set but then we have to test on a new set which is going to be slightly different from the data set on which we build th machine learning model
 * Test the performance on the test set shouldnt be that different from the performance from the training set
 
-### Splitting the Datasets on Python
+### Splitting the Datasets in Python
 ```
 	# Splitting the dataset into the Training set and Test set
 	import sklearn.cross_validation import train_test_split
@@ -16,7 +16,7 @@
 ```
 * The better we learn the correlationship, the better we are at predicting the test set learned correctly from the training set.
 
-### Splitting the Datasets on R
+### Splitting the Datasets in R
 ```
 	# Splitting the data set into the Training set and Test set
 	# install.packages('caTools')

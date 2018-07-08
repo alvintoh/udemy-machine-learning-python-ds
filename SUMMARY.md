@@ -25,3 +25,15 @@
 * [14. Categorical Data](section-02/Section02-14.md)
 * [15. WARNING - Update](section-02/Section02-15.md)
 * [16. Splitting the Dataset into the Training set and Test set](section-02/Section02-16.md)
+* [17. Feature Scaling](section-02/Section02-17.md)
+* [18. And here is our Data Preprocessing Template!](section-02/Section02-18.md)
+* [Quiz 1: Data Preprocessing](section-02/Quiz01.md)
+
+## Section 3: Part 2 Regression
+* [19. Welcome to Part 2 - Regression](section-03/Section03-19.md)
+
+## Section 4: Simple Linear Regression
+* [20. How to get the dataset](section-04/Section04-20.md)
+* [21. Dataset + Business Problem Description](section-04/Section04-21.md)
+* [22. Simple Linear Regression Intuition - Step 1](section-04/Section04-22.md)
+* [23. Simple Linear Regression Intuition - Step 2](section-04/Section04-23.md)
